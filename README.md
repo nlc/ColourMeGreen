@@ -26,11 +26,13 @@ Some desired functionalities:
   * A literal number appended to the end of a word means a pause of that many beats for the word
   * An empty space between words prints a literal space with no pause
   * An underscore `_` between words prints a literal space with a pause of one beat
+  * A starting caret `^` is an anchor for pausing at the beginning of a line
+  * A dollar sign `$` is an anchor for pausing at the end of a line
   * To pause printing without writing a space, use a caret `^` instead of a space
 * *Maybe* the ability to define macros
 
 A tentative example, using the lyrics from the aforementioned song:
 
-    {+MAGENTA|+Bright}Vi4^o^let{- 2} _ flows _ from the wound2 in your2 \_2 chest2 $12
-    {+BLACK|+Reverse}Black4{- 2} is2 the hole3 in which _ you2 _3 rest2 11
+    {+MAGENTA|+Bold}Vi4^o^let{- 2} _ flows _ from the wound2 in your2 \_2 chest2 $12
+    {+BLACK|+Reverse}Black4{- 2} is2 the hole3 in which _ you2 _3 rest2 $11
     Your heart4 of2 _ {+YELLOW|+Faint|+Reverse}gold2{- %} _ was ripped _ in2 \_3 two2 $12
