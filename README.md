@@ -18,9 +18,17 @@ Some desired functionalities:
   * `plain words` are printed as-is
   * `{terms in braces are commands}`
   * `{in | braces and | between | delimiters`} are multiple commands
-  * `{+COLORNAME}` adds a color to the stack; `{+ATTRIBUTENAME}` pushes an attribute to the stack
+  * `{+COLORNAME}` adds a foreground color to the stack
+  * `{+colorname}` adds a background color to the stack
+  * `{+Attributename}` pushes an attribute to the stack
   * `{-}` pops a color/attribute from the stack; `{- 3}` pops 3; `{- %}` pops all
+  * A literal number appended to the end of a word means a pause of that many beats for the word
+  * An empty space between words prints a literal space with no pause
+  * An underscore `_` between words prints a literal space with a pause of one beat
+  * To pause printing without writing a space, use a caret `^` instead of a space
 * *Maybe* the ability to define macros
 
-{+MAGENTA|+BRIGHT}Vi4^o^let{- 2} _ flows _ from the wound2 in your2 \_2 chest2 $12
-Your heart4 of2 _ {+YELLOW|+FAINT|+REVERSE}gold2{- %} _ was ripped _ in2 \_3 two2 $12
+A tentative example, using the lyrics from the aforementioned song:
+    {+MAGENTA|+Bright}Vi4^o^let{- 2} _ flows _ from the wound2 in your2 \_2 chest2 $12
+    {+BLACK|+Reverse}Black4{- 2} is2 the hole3 in which _ you2 _3 rest2 11
+    Your heart4 of2 _ {+YELLOW|+Faint|+Reverse}gold2{- %} _ was ripped _ in2 \_3 two2 $12
