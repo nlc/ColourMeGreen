@@ -1,5 +1,6 @@
 # ColourMeGreen
 An experiment in creating a simple notation for making terminal animations.
+
 Named after the early [banger](https://www.youtube.com/watch?v=lJne0uWgaK8) by a favorite band.
 
 Still a WIP.
