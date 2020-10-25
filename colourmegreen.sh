@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 spaceline() {
   echo
   echo
