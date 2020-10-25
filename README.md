@@ -1,5 +1,6 @@
 # ColourMeGreen
 An experiment in creating a simple notation for making terminal animations.
+
 Named after the early [banger](https://www.youtube.com/watch?v=lJne0uWgaK8) by a favorite band.
 
 Still a WIP.
@@ -23,4 +24,5 @@ Some desired functionalities:
 * *Maybe* the ability to define macros
 
 {+MAGENTA|+BRIGHT}Vi4^o^let{- 2} _ flows _ from the wound2 in your2 \_2 chest2 $12
+
 Your heart4 of2 _ {+YELLOW|+FAINT|+REVERSE}gold2{- %} _ was ripped _ in2 \_3 two2 $12
