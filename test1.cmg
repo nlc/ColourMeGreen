@@ -1,1 +1,4 @@
-The following text is {+Reverse}reversed{- 1}.
+This is {+RED|+green}red on green{-%}.
+This is {+Reverse|+RED|+green}green on red{-%}.
+This is {+Blink|+Reverse|+RED|+green}green on red, blinking{-%}.
+This is {+Blink|+Reverse|+RED|+green|+Faint}the above, faint{-%}.

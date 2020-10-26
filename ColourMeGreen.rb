@@ -77,13 +77,15 @@ class ColourMeGreen
     str.split(/ *\| */).each do |subcommand|
       sigil = subcommand.chars[0]
       case sigil
-      when '+'
-        # push attribute
+      when '+' # push attribute
         push_attribute(subcommand[1..-1].strip.to_sym)
-      when '-'
-        # pop attribute
+      when '-' # pop attribute
         num = subcommand[1..-1].strip
-        pop_attribute(num == '%' ? :all : num.to_i)
+        pop_attribute(num.length.zero? ? 1 : num == '%' ? :all : num.to_i)
+      when ':' # direction command
+        
+      when '@' # location command
+        
       else
       end
     end

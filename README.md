@@ -23,6 +23,11 @@ Some desired functionalities:
   * `{+colorname}` adds a background color to the stack
   * `{+Attributename}` pushes an attribute to the stack
   * `{-}` pops a color/attribute from the stack; `{- 3}` pops 3; `{- %}` pops all
+  * `{:R}` moves the cursor 1 space to the right; `U`, `D` and `L` behave as might be expected
+  * `{:3R}` moves the cursor 3 spaces to the right, etc.
+  * `{:3R6U}` moves the cursor 3 spaces to the right, then 6 up
+  * `{:b9D}` moves the cursor to the beginning of the previous word, then 9 spaces down
+  * `{@12,7}` moves the cursor to the point <12,7>.
   * A literal number appended to the end of a word means a pause of that many beats for the word
   * An empty space between words prints a literal space with no pause
   * An underscore `_` between words prints a literal space with a pause of one beat
