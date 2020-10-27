@@ -27,6 +27,7 @@ Some desired functionalities:
   * `{:3R}` moves the cursor 3 spaces to the right, etc.
   * `{:3R6U}` moves the cursor 3 spaces to the right, then 6 up
   * `{:b9D}` moves the cursor to the beginning of the previous word, then 9 spaces down
+  * `{:r9D}` moves the cursor to the beginning of the line, then 9 spaces down
   * `{@12,7}` moves the cursor to the point <12,7>.
   * A literal number appended to the end of a word means a pause of that many beats for the word
   * An empty space between words prints a literal space with no pause

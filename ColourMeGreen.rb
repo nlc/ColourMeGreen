@@ -62,7 +62,42 @@ class ColourMeGreen
     end
   end
 
+  # ["b", "3", "D", "10", "R", "5", "L", "U"]
+  def parse_directionals(dir_commands)
+    num = 1
+
+    dir_commands.each_with_index do |dir_command, i|
+      if i == 0 && dir_command.match(/[br]/)
+        case dir_command
+        when 'b'
+          # Move to beginning of word TODO
+        when 'r'
+          # Move to beginning of line TODO
+        end
+      elsif dir_command.match?(/\d+/)
+        # Set movement number
+        num = dir_command.to_i
+      elsif dir_command.match(/[UDRL]/)
+        # Send the movement command
+        send_movement(dir_command.to_sym, num)
+        num = 1
+      end
+    end
+  end
+
   # private
+
+  def set_config(param, value)
+    puts "fixme | set #{param} to #{value}"
+  end
+
+  def return_word
+    # TODO
+  end
+
+  def return_line
+    print "\r"
+  end
 
   def send_attribute(signal_key)
     print "\033[#{@KEY_TO_ATTRIBUTE[signal_key]}"
@@ -72,6 +107,14 @@ class ColourMeGreen
     print "\033[#{amount > 0 ? amount : ''}#{@KEY_TO_MOVEMENT[signal_key]}"
   end
 
+  def send_location(x, y)
+    print "\033[#{y};#{x}H"
+  end
+
+  # NOTE: Keeping track of what ASCII special chars we've used
+  #       Ideally we won't use any more than once
+  #        !@#$%^    -_+={}|:,
+  #       ~      &*()
   def parse_command(str)
     str.gsub!(/[{}]/, '')
     str.split(/ *\| */).each do |subcommand|
@@ -82,10 +125,12 @@ class ColourMeGreen
       when '-' # pop attribute
         num = subcommand[1..-1].strip
         pop_attribute(num.length.zero? ? 1 : num == '%' ? :all : num.to_i)
-      when ':' # direction command
-        
+      when ':' # directional commands
+        dir_commands = subcommand[1..-1].scan(/(^b|\d+|[UDRL])/).flatten
+        parse_directionals(dir_commands)
       when '@' # location command
-        
+        coords = subcommand[1..-1].match(/\d+ *, *\d+/).to_s.split(/ *, */).map(&:to_i)
+        send_location(*coords)
       else
       end
     end
@@ -96,9 +141,13 @@ class ColourMeGreen
     print str
   end
 
-  # TODO
   def parse_config_line(line)
-    puts 'fixme'
+    matches = line.gsub(/^ *!! */, '').match(/(\w+) *= *(\w+)/)
+    if matches.length >= 3
+      param, value = matches[1], matches[2]
+
+      set_config(param, value)
+    end
   end
 
   def parse_regular_line(line)
@@ -125,9 +174,9 @@ class ColourMeGreen
         # comment line; do nothing
       when /^ *!!/
         # configuration line
-        parse_config_line(line)
+        parse_config_line(line.gsub(/ *#.*/, ''))
       else
-        # regular line TODO
+        # regular line
         parse_regular_line(line)
       end
     end
