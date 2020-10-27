@@ -39,6 +39,7 @@ Some desired functionalities:
 
 A tentative example, using the lyrics from the aforementioned song:
 
-    {+MAGENTA|+Bold}Vi4^o^let{- 2} _ flows _ from the wound2 in your2 _2 chest2 $12
-    {+BLACK|+Reverse}Black4{- 2} is2 the hole3 in which _ you2 _3 rest2 $11
+    {+MAGENTA|+Faint}Vi4^o^let{- 2} _ flows _ from the wound2 in your2 _2 chest2 $12
+    {+black|+Reverse}Black4{- 2} is2 the hole3 in which _ you2 _3 rest2 $11
     Your heart4 of2 _ {+YELLOW|+Faint|+Reverse}gold2{- %} _ was ripped _ in2 _3 two2 $12
+    {+GREEN}Soaked4{-|:D}in2{:D}the{+GREEN|:U}sickness4_{-|:U}that{:D}is_{+GREEN|:D}you2{-} $15
