@@ -88,6 +88,7 @@ class ColourMeGreen
   # private
 
   def set_config(param, value)
+    # TODO
     puts "fixme | set #{param} to #{value}"
   end
 
