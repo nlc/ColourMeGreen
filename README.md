@@ -50,3 +50,7 @@ A tentative example, using the lyrics from the aforementioned song:
 With the progress so far, the above script outputs the following:
 
 ![Demo gif](https://github.com/nlc/ColourMeGreen/raw/master/demo1.gif?raw=true)
+
+Some notes:
+* Must handle spaces after words less naively
+* test3.cmg shows that the return to beginning of line is not working
