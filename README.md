@@ -39,7 +39,12 @@ Some desired functionalities:
 
 A tentative example, using the lyrics from the aforementioned song:
 
+    # comment
+    !! BPM = 400
+    
     {+MAGENTA|+Faint}Vi4^o^let{- 2} _ flows _ from the wound2 in your2 _2 chest2 $12
     {+black|+Reverse}Black4{- 2} is2 the hole3 in which _ you2 _3 rest2 $11
     Your heart4 of2 _ {+YELLOW|+Faint|+Reverse}gold2{- %} _ was ripped _ in2 _3 two2 $12
-    {+GREEN}Soaked4{-|:D}in2{:D}the{+GREEN|:U}sickness4_{-|:U}that{:D}is_{+GREEN|:D}you2{-} $15
+    {+GREEN}Soaked4{-|:D}in2{:D}the{+GREEN|:U}sickness5{-|:U}that{:D}is2{+GREEN|:D}you2{-} $15
+
+With the progress so far, the above script outputs the following:

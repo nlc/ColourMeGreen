@@ -1,6 +1,7 @@
 class ColourMeGreen
   attr_accessor :KEY_TO_ATTRIBUTE, :KEY_TO_MOVEMENT
   attr_accessor :attribute_stack
+  attr_accessor :configs
 
   def initialize
     @KEY_TO_ATTRIBUTE = {
@@ -39,6 +40,11 @@ class ColourMeGreen
     }
 
     @attribute_stack = []
+
+    # init to defaults
+    @configs = {
+      bpm: 80
+    }
   end
 
   def push_attribute(signal_key)
@@ -70,9 +76,9 @@ class ColourMeGreen
       if i == 0 && dir_command.match(/[br]/)
         case dir_command
         when 'b'
-          # Move to beginning of word TODO
+          return_word # Move to beginning of word TODO
         when 'r'
-          # Move to beginning of line TODO
+          return_line
         end
       elsif dir_command.match?(/\d+/)
         # Set movement number
@@ -88,12 +94,13 @@ class ColourMeGreen
   # private
 
   def set_config(param, value)
-    # TODO
-    puts "fixme | set #{param} to #{value}"
+    key = param.downcase.gsub(/[^a-z_]/, '').to_sym
+    @configs[key] = value
   end
 
   def return_word
     # TODO
+    raise 'Method not implemented!'
   end
 
   def return_line
@@ -139,7 +146,16 @@ class ColourMeGreen
 
   #TODO
   def parse_non_command(str)
-    print str
+    beats_per_minute = @configs[:bpm]
+    beat_length = 60.0 / beats_per_minute.to_f
+
+    str.split(/ +/).each do |word|
+      print word
+      beats_rep = word.match(/\d+$/)
+      beats = beats_rep.nil? ? 1 : beats_rep.to_s.to_i
+      sleep beat_length * beats
+      print ' '
+    end
   end
 
   def parse_config_line(line)
