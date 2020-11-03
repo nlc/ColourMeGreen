@@ -48,3 +48,5 @@ A tentative example, using the lyrics from the aforementioned song:
     {+GREEN}Soaked4{-|:D}in2{:D}the{+GREEN|:U}sickness5{-|:U}that{:D}is2{+GREEN|:D}you2{-} $15
 
 With the progress so far, the above script outputs the following:
+
+![Demo gif](https://github.com/nlc/ColourMeGreen/raw/master/demo1.gif?raw=true)
