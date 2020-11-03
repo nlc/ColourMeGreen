@@ -1,3 +1,5 @@
+require 'byebug' # TODO: Remove this in final version
+
 class ColourMeGreen
   attr_accessor :KEY_TO_ATTRIBUTE, :KEY_TO_MOVEMENT
   attr_accessor :attribute_stack
@@ -43,7 +45,7 @@ class ColourMeGreen
 
     # init to defaults
     @configs = {
-      bpm: 80
+      bpm: 360
     }
   end
 
@@ -134,7 +136,7 @@ class ColourMeGreen
         num = subcommand[1..-1].strip
         pop_attribute(num.length.zero? ? 1 : num == '%' ? :all : num.to_i)
       when ':' # directional commands
-        dir_commands = subcommand[1..-1].scan(/(^b|\d+|[UDRL])/).flatten
+        dir_commands = subcommand[1..-1].scan(/(^[br]|\d+|[UDRL])/).flatten
         parse_directionals(dir_commands)
       when '@' # location command
         coords = subcommand[1..-1].match(/\d+ *, *\d+/).to_s.split(/ *, */).map(&:to_i)

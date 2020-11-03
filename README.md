@@ -41,7 +41,8 @@ A tentative example, using the lyrics from the aforementioned song:
 
     # comment
     !! BPM = 400
-    
+    CTHULHU!8
+    {+Faint|+GREEN}CTHULHU!0{:rU}CTHULHU!8{:2D|- % } $16
     {+MAGENTA|+Faint}Vi4^o^let{- 2} _ flows _ from the wound2 in your2 _2 chest2 $12
     {+black|+Reverse}Black4{- 2} is2 the hole3 in which _ you2 _3 rest2 $11
     Your heart4 of2 _ {+YELLOW|+Faint|+Reverse}gold2{- %} _ was ripped _ in2 _3 two2 $12
@@ -49,8 +50,7 @@ A tentative example, using the lyrics from the aforementioned song:
 
 With the progress so far, the above script outputs the following:
 
-![Demo gif](https://github.com/nlc/ColourMeGreen/raw/master/demo1.gif?raw=true)
+![Demo gif](https://github.com/nlc/ColourMeGreen/raw/master/demo2.gif?raw=true)
 
 Some notes:
 * Must handle spaces after words less naively
-* test3.cmg shows that the return to beginning of line is not working
