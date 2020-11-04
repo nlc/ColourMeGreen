@@ -151,7 +151,7 @@ class ColourMeGreen
     beats_per_minute = @configs[:bpm]
     beat_length = 60.0 / beats_per_minute.to_f
 
-    str.split(/ +/).each do |word|
+    str.split(/[ ^]+/).each do |word|
       print word
       beats_rep = word.match(/\d+$/)
       beats = beats_rep.nil? ? 1 : beats_rep.to_s.to_i
@@ -196,7 +196,7 @@ class ColourMeGreen
         parse_config_line(line.gsub(/ *#.*/, ''))
       else
         # regular line
-        parse_regular_line(line)
+        parse_regular_line(line.gsub(/ *#.*/, ''))
       end
     end
   end

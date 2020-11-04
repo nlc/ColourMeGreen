@@ -10,10 +10,11 @@ Some desired functionalities:
   * jumping back to beginning of the last word
   * the ability to chain movement instructions
   * absolute and relative location
+  * clearing the screen
 * Full ANSI terminal color support
   * A stack of colors that can be pushed and popped
 * The ability to sleep for periods of time
-  * Maybe to set a BPM and sleep in terms of a number of beats
+  * Set a BPM and sleep in terms of a number of beats
   * The ability to sleep for random periods of time
 * A relatively simple notation (subject to change):
   * `plain words` are printed as-is
@@ -28,7 +29,7 @@ Some desired functionalities:
   * `{:3R6U}` moves the cursor 3 spaces to the right, then 6 up
   * `{:b9D}` moves the cursor to the beginning of the previous word, then 9 spaces down
   * `{:r9D}` moves the cursor to the beginning of the line, then 9 spaces down
-  * `{@12,7}` moves the cursor to the point <12,7>.
+  * `{@12,7}` moves the cursor to the point <12,7>
   * A literal number appended to the end of a word means a pause of that many beats for the word
   * An empty space between words prints a literal space with no pause
   * An underscore `_` between words prints a literal space with a pause of one beat
@@ -54,3 +55,6 @@ With the progress so far, the above script outputs the following:
 
 Some notes:
 * Must handle spaces after words less naively
+* Should add a clear-screen command
+* Specific syntax for spaces isn't really necessary
+* The beat-pause system would benefit from more precise time controls

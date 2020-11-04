@@ -5,4 +5,9 @@ CTHULHU!8
 {+MAGENTA|+Faint}Vi4^o^let{- 2} _ flows _ from the wound2 in your2 _2 chest2 $12
 {+black|+Reverse}Black4{- 2} is2 the hole3 in which _ you2 _3 rest2 $11
 Your heart4 of2 _ {+YELLOW|+Faint|+Reverse}gold2{- %} _ was ripped _ in2 _3 two2 $12
-{+GREEN}Soaked4{-|:D}in2{:D}the{+GREEN|:U}sickness5{-|:U}that{:D}is2{+GREEN|:D}you2{-} $15
+{+GREEN}Soaked4{-|:D}in2{:D}the{+GREEN|:U}sick2^ness3{-|:U}that{:D}is2{+GREEN|:D}you2{-} $15
+$16
+{+Reverse|+Faint}Grey4{-%} is2 the box2 that2 holds2 my3 head16
+{+YELLOW}Yellow's6{-} the wind3 when everyone's7 dead14
+{+Faint|+RED}Red4{-%} is2 the blood2 dried2 on2 the2 rope17
+But {+GREEN|+Faint}GREEN4{-|:7LDR} GREEN3{:7LDR} {+Reverse}GREEN3{-%} is your2 last2 hope17 # Replace the explicit movmenents with 'b'
