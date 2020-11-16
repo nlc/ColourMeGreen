@@ -10,4 +10,4 @@ $16
 {+Reverse|+Faint}Grey4{-%} is2 the box2 that2 holds2 my3 head16
 {+YELLOW}Yellow's6{-} the wind3 when everyone's7 dead14
 {+Faint|+RED}Red4{-%} is2 the blood2 dried2 on2 the2 rope17
-But {+GREEN|+Faint}GREEN4{-|:7LDR} GREEN3{:7LDR} {+Reverse}GREEN3{-%} is your2 last2 hope17 # Replace the explicit movmenents with 'b'
+But {+GREEN|+Faint}GREEN4 {-|:7LDR} GREEN3{:7LDR|+Reverse} GREEN3{-%} is your2 last2 hope17 # Replace the explicit movmenents with 'b'
